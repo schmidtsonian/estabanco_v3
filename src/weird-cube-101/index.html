@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weird Cube - Estebanco</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Señor Creative Developer"/>
+
+  <style>
+    html, body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      outline: none;
+    }
+
+    .switch {
+      position: fixed;
+      left: 0;
+      width: 100dvw;
+      height: 50dvh;
+      background-color: #fff;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .switch--top {
+      top: 0;
+    }
+    .switch--bottom {
+      bottom: 0;
+    }
+
+    .switch:hover {
+      opacity: 0.04;
+    }
+  </style>
+</head>
+<body>
+  <canvas class="canvas" data-canvas="js-canvas"></canvas>
+  <div data-hover-top class="switch switch--top"></div>
+  <div data-hover-bottom class="switch switch--bottom"></div>
+  
+  <script type="module" src="./weird-cube-101.js"></script>
+</body>
+</html>

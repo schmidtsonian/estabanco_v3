@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Estebanco</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Señor Creative Developer"/>
+  <link rel="icon" type="image/png" href="./estebanco_256.png" sizes="256x256">
+  <style>
+    @font-face {
+      font-family: 'DM Sans';
+      src: url('./fonts/DMSans-VariableFont_opsz.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'Krona One';
+      src: url('./fonts/KronaOne-Regular.ttf') format('truetype');
+    }
+
+    :root {
+      --ff-base: 'DM Sans', sans-serif;
+      --ff-headlines: 'Krona One', sans-serif;
+
+      --fvs-base-light: 'opsz' 9, 'wght' 400;
+      --fvs-base-thin: 'opsz' 28.0992, 'wght' 100;
+      --ffs-base: 'ss02';
+
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+      --c-dark: '#0f0f0f';
+    }
+    html, body {
+      margin: 0;
+    }
+    body {
+      font-family: var(--ff-base);
+      font-variation-settings: var(--fvs-base-light);
+      font-feature-settings: var(--ffs-base);
+      color: var(--c-dark);
+      line-height: 1.25;
+    }    
+
+    li {
+      list-style: none;
+    }
+
+    ul {
+      padding-left: 0;
+    }
+
+    a {
+      color: currentColor;
+      text-decoration: none;
+      position: relative;
+    }
+
+    a:after {
+      content: ' [↗]';
+      opacity: 0.45;
+      font-size: 0.75em;
+    }
+
+    .main {
+      padding: 1em;
+    }
+
+    .h1,.h2 {
+      margin: 0;
+    }
+
+    .h1 {
+      font-family: var(--ff-headlines);
+    }
+
+    .h2 {
+      font-size: 32px;
+      font-variation-settings: var(--fvs-base-thin);
+      padding-bottom: 0.25em;
+    }
+
+    .h3 {
+      padding-bottom: 2em;
+    }
+
+    .letters {
+      position: relative;
+    }
+    .letters > span {
+      position: relative;
+      display: inline-block;
+      background-color: #fff;
+    }
+
+    .letters > span:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      mix-blend-mode: difference;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.25s var(--ease);
+      transition-delay: 0.25s
+    }
+
+    a:hover .letters span:before {
+      transform: scaleX(1);
+    }
+
+    a:hover .letters span:nth-child(1):before {
+      transition-delay: 0s;
+    }
+    a:hover .letters span:nth-child(2):before {
+      transition-delay: 0.2s;
+    }
+    a:hover .letters span:nth-child(3):before {
+      transition-delay: 0.3s;
+    }
+
+  </style>
+</head>
+<body>
+  <main class="main">
+    <h1 class="h1">
+      Este banco <img src="./estebanco_256.png" alt="Estebanco" width="30" height="30" ><br>está ocupado
+    </h1>
+    <h3 class="h3">Señor Creative Developer</h3>
+
+    <h2 class="h2">Selected works ...</h2>
+    <ul>
+      <li>
+        <a href="https://dribbble.com/shots/6333412-Think-Blue-VolksWagen" title="VolksWagen - Storytelling" target="_blank">
+          <span class="letters">
+            <span>Volks</span>Wagen <span>-</span> <span>St</span>orytelling
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://dribbble.com/shots/6335420-Mitsubishi-History" title="Mitsubishi - Carousel" target="_blank">
+          <span class="letters">
+            <span>Mitsubishi</span> <span>-</span> Carous<span>e</span>l
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://dribbble.com/shots/6343283-Fiat-M-xico" title="Fiat - Highlights" target="_blank">
+          <span class="letters">
+            <span>Fiat</span> <span>-</span> Hig<span>hl</span>ights
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://dribbble.com/shots/6343181-Nanome" title="SVG Animations" target="_blank">
+          <span class="letters">
+            <span>SVG</span> Ani<span>ma</span>tions
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://dribbble.com/shots/15925676-Page-transition-Preloader-phi-CAE" title="Page Transition" target="_blank">
+          <span class="letters">
+            P<span>a</span>ge Transi<span>ti</span>on
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://dribbble.com/shots/6332757-Benchmark-bouquets" title="Intro 01" target="_blank">
+          <span class="letters">
+            <span>In</span>tro <span>01</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://dribbble.com/shots/6333108-The-Guild-Hotel" title="Intro 02" target="_blank">
+          <span class="letters">
+            <span>In</span>tro <span>02</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://dribbble.com/shots/6332667-Calendar" title="Editorial Charts" target="_blank">
+          <span class="letters">
+            <span>Ed</span>itorial C<span>ha</span>rts
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://dribbble.com/shots/6347587-Personal-Site" title="Menu" target="_blank">
+          <span class="letters">
+            M<span>e</span>nu
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://dribbble.com/shots/3664491-Nutanix-Calm" title="Slider" target="_blank">
+          <span class="letters">
+            Slid<span>er</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+
+    <h2 class="h2">Experiments ...</h2>
+    <ul>
+      <li>
+        <a href="./weird-cube-101/" title="Weird cube 101" target="_blank">
+          <span class="letters">
+            W<span>e</span>ird c<span>ub</span>e <span>101</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>
