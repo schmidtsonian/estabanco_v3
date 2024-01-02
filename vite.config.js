@@ -1,18 +1,21 @@
-const isCodeSandbox = 'SANDBOX_URL' in process.env || 'CODESANDBOX_HOST' in process.env
-
 export default {
-    root: 'src/',
-    publicDir: '../static/',
-    base: './',
-    server:
-    {
-        host: true,
-        open: !isCodeSandbox // Open if it's not a CodeSandbox
+  base: '/',
+  root: 'src/',
+  publicDir: '../static/',
+  server:
+  {
+      host: true,
+  },
+  build:
+  {
+    outDir: '../dist',
+    emptyOutDir: true,
+    sourcemap: true,
+    rollupOptions: {
+      input: {
+        main: 'src/index.html',
+        'weird-cube-101': 'src/weird-cube-101/index.html',
+      },
     },
-    build:
-    {
-        outDir: '../dist',
-        emptyOutDir: true,
-        sourcemap: true
-    }
+  }
 }
