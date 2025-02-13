@@ -55,8 +55,10 @@
 
     a:after {
       content: ' [↗]';
+      display: inline-block;
       opacity: 0.45;
       font-size: 0.75em;
+      transition: transform 0.85s var(--ease);
     }
 
     .main {
@@ -105,6 +107,10 @@
       transition-delay: 0.25s
     }
 
+    a:hover:after {
+      transform: translateX(0.25em) scale(1.25) rotate(45deg);
+      position: relative;
+    }
     a:hover .letters span:before {
       transform: scaleX(1);
     }
@@ -120,6 +126,7 @@
     }
 
   </style>
+
 </head>
 <body>
   <main class="main">
@@ -154,28 +161,28 @@
       <li>
         <a href="https://dribbble.com/shots/6343181-Nanome" title="SVG Animations" target="_blank">
           <span class="letters">
-            <span>SVG</span> Ani<span>ma</span>tions
+            Nanome - <span>SVG</span> Ani<span>ma</span>tions
           </span>
         </a>
       </li>
       <li>
         <a href="https://dribbble.com/shots/15925676-Page-transition-Preloader-phi-CAE" title="Page Transition" target="_blank">
           <span class="letters">
-            P<span>a</span>ge Transi<span>ti</span>on
+            phi CAE - P<span>a</span>ge Transi<span>ti</span>on
           </span>
         </a>
       </li>
       <li>
-        <a href="https://dribbble.com/shots/6332757-Benchmark-bouquets" title="Intro 01" target="_blank">
+        <a href="https://dribbble.com/shots/6332757-Benchmark-bouquets" title="Benchmark bouquets" target="_blank">
           <span class="letters">
-            <span>In</span>tro <span>01</span>
+            <span>Benchmark bouquets</span> <span>-</span> intro
           </span>
         </a>
       </li>
       <li>
         <a href="https://dribbble.com/shots/6333108-The-Guild-Hotel" title="Intro 02" target="_blank">
           <span class="letters">
-            <span>In</span>tro <span>02</span>
+            <span>The</span> Guild Ho<span>tel</span> - Intro
           </span>
         </a>
       </li>
@@ -196,7 +203,7 @@
       <li>
         <a href="https://dribbble.com/shots/3664491-Nutanix-Calm" title="Slider" target="_blank">
           <span class="letters">
-            Slid<span>er</span>
+            <span>Nutanix</span> - Slid<span>er</span>
           </span>
         </a>
       </li>
@@ -208,6 +215,13 @@
         <a href="./weird-cube-101/" title="Weird cube 101" target="_blank">
           <span class="letters">
             W<span>e</span>ird c<span>ub</span>e <span>101</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="./weird-circle-101/" title="Weird circle 101" target="_blank">
+          <span class="letters">
+            <span>we</span>ir<span>d</span> Circl<span>e</span> <span>101</span>
           </span>
         </a>
       </li>
